@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import { ComponentsDemo } from "./components-demo";
+
 export const metadata: Metadata = {
   title: "Dizajn sistem · Orderly",
 };
@@ -122,6 +124,21 @@ export default function TestPage() {
       <div className="dark rounded-xl bg-background p-6 text-foreground">
         <p className="text-label mb-6 text-muted-foreground">Tamna tema (.dark)</p>
         <Showcase />
+      </div>
+
+      <div className="space-y-6">
+        <div>
+          <h2 className="text-h1">Komponente</h2>
+          <p className="text-body text-muted-foreground">shadcn/ui u brend bojama (korak 0.4).</p>
+        </div>
+        <ComponentsDemo />
+      </div>
+
+      <div className="dark rounded-xl bg-background p-6 text-foreground">
+        <p className="text-label mb-6 text-muted-foreground">
+          Komponente, tamna tema (prozori i meniji se otvaraju van ove sekcije, u svetloj temi)
+        </p>
+        <ComponentsDemo />
       </div>
     </main>
   );
