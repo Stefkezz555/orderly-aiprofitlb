@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { Suspense } from "react";
+import { UserButton } from "@clerk/nextjs";
 
 const kpis = [
   { label: "Prihod danas", value: "€1.284", change: "+12,4%", up: true },
@@ -14,7 +16,12 @@ const statuses = [
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-muted px-6 py-12">
+    <main className="relative flex min-h-screen items-center justify-center bg-muted px-6 py-12">
+      <div className="absolute right-4 top-4">
+        <Suspense>
+          <UserButton />
+        </Suspense>
+      </div>
       <div className="w-full max-w-2xl space-y-8">
         <div className="space-y-2 text-center">
           <span className="inline-block rounded-full bg-brand-accent-bg px-3 py-1 text-label text-brand-accent">
