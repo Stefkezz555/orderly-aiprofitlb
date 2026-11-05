@@ -736,3 +736,11 @@ Svaka boja ima i `-bg` svetlu varijantu za pozadinu oznaka. Tamna tema se defini
 - **2.13** zavisi od **1.15, 1.16 i 1.19**.
 - **2.15** zavisi od **2.14** i **1.14**.
 - **2.16 do 2.18** idu poslednji; zavise od svih prethodnih koraka.
+
+## Pravila za rad na projektu
+
+- Stack projekta: Next.js 16 App Router, TypeScript, Supabase, Clerk, Tailwind CSS v4, shadcn/ui, Recharts, SWR, Vercel i Resend.
+- Tekst korisničkog interfejsa piši na srpskom jeziku, latinicom.
+- Pre pisanja ili izmene Next.js koda pročitaj relevantnu dokumentaciju instalirane verzije u `node_modules/next/dist/docs/`. Ne pretpostavljaj API-je starijih verzija; Next.js 16 koristi `proxy.ts` umesto `middleware.ts`.
+- Drži tipove bezbednim, koristi postojeće obrasce i pokreni relevantne provere (`npm run lint`, `npm run build`) posle izmena.
+- Tajne i lokalne env fajlove ne upisuj u Git niti izlaži klijentskom kodu.
